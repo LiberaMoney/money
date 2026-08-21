@@ -298,6 +298,16 @@ body {
   background:linear-gradient(165deg, var(--pink) 0%, var(--pink-deep) 100%);
   border-radius:24px; padding:40px 28px; max-width:520px; margin:32px auto 0;
   color:#fff; box-shadow:0 18px 44px rgba(255,30,140,0.3);
+  position:relative;
+}
+.price-box.single {
+  background:var(--cream); color:var(--ink); border:2px solid var(--line);
+  box-shadow:0 10px 30px rgba(0,0,0,0.07); margin-top:18px;
+}
+.price-badge {
+  position:absolute; top:-15px; left:50%; transform:translateX(-50%);
+  background:var(--ink); color:#fff; padding:5px 20px; border-radius:999px;
+  font-family:'Zen Maru Gothic',sans-serif; font-weight:900; font-size:12px; white-space:nowrap;
 }
 .price-plan { font-family:'Zen Maru Gothic',sans-serif; font-weight:900; font-size:15px; letter-spacing:0.1em; opacity:0.95; }
 .price-amt {
@@ -308,13 +318,23 @@ body {
 .price-amt .tax { font-size:0.28em; font-weight:600; opacity:0.85; margin-left:6px; letter-spacing:0.05em; }
 .price-per { font-size:13px; opacity:0.9; font-weight:500; margin-bottom:24px; }
 .price-per .line { display:inline-block; padding:0 6px; }
+.price-box.single .price-plan { color:var(--pink-deep); }
+.price-box.single .price-amt { color:var(--pink); }
+.price-box.single .price-per { color:var(--ink-soft); opacity:1; }
 .join-square {
   display:inline-block; background:#fff; color:var(--pink-deep);
   font-family:'Zen Maru Gothic',sans-serif; font-weight:900; font-size:16px;
   padding:16px 46px; border-radius:999px; text-decoration:none;
   transition:transform 0.2s; box-shadow:0 8px 22px rgba(0,0,0,0.2);
 }
+.price-box.single .join-square { background:var(--pink); color:#fff; }
 .join-square:hover { transform:translateY(-2px) scale(1.02); }
+.upgrade-note {
+  max-width:620px; margin:24px auto 0; padding:20px 22px;
+  background:var(--pink-pale); border:2px dashed var(--pink); border-radius:16px;
+  color:var(--ink-soft); font-size:13px; line-height:1.9; font-weight:500;
+}
+.upgrade-note strong { display:block; color:var(--pink-deep); font-family:'Zen Maru Gothic',sans-serif; font-size:15px; }
 .join-flow {
   margin-top:30px; font-size:clamp(12.5px,3.3vw,14px); color:var(--ink-soft); font-weight:500; line-height:2;
 }
@@ -383,15 +403,15 @@ footer { background:var(--ink); color:#fff; text-align:center; padding:40px 22px
   <div class="wrap">
     <p class="eyebrow rv">START HERE</p>
     <p class="free-label rv">＼ まずはここから ／</p>
-    <h2 class="free-title rv">第1回は、<span class="u">無料</span>で見られます</h2>
+    <h2 class="free-title rv"><span class="u">無料準備講座</span>から始められます</h2>
     <p class="free-desc rv">
       「給与明細とお金の流れ」——見えない天引きの正体を知る回。<br>
-      申し込みの前に、まずは動画で"雰囲気"を確かめてください。
+      まずはスタート前チェックに答えて、講座の雰囲気を確かめてください。
     </p>
-    <a class="yt-btn rv" href="https://youtu.be/uT4fndyZb5s?si=8JkXbWqsBe0onsuG" target="_blank" rel="noopener">
-      <span class="yt-ic"></span>第1回を無料で見る
+    <a class="yt-btn rv" href="https://docs.google.com/forms/d/e/1FAIpQLSeh1oEiwktsXuaKFyYlFlb7mgQZndGyd1MIMK3-9YzJkoK-7w/viewform" target="_blank" rel="noopener">
+      <span aria-hidden="true">🎁</span>無料準備講座を受け取る
     </a>
-    <p class="free-note rv">※ YouTubeが開きます・登録不要</p>
+    <p class="free-note rv">※ Googleフォーム送信後に、無料動画の視聴URLが表示されます</p>
   </div>
 </section>
 
@@ -401,7 +421,7 @@ footer { background:var(--ink); color:#fff; text-align:center; padding:40px 22px
     <p class="eyebrow rv">WHAT'S THIS</p>
     <h2 class="sec-head rv">知らないで損しない、<br>大人のための<span class="pk">マネー基礎講座</span>。</h2>
     <p class="what-lead rv">
-      お金の「<strong>仕組み・守り方・稼ぎ方・自立</strong>」を4回に分けて体系的に。<br>
+      無料準備講座と本講座全3回で、お金の「<strong>仕組み・守り方・稼ぎ方・自立</strong>」を体系的に。<br>
       知識の詰め込みではなく、<strong>自分で選べる力</strong>を育てるのがゴールです。
     </p>
     <div class="pillars">
@@ -418,11 +438,11 @@ footer { background:var(--ink); color:#fff; text-align:center; padding:40px 22px
   <div class="wrap">
     <div class="curri-head">
       <p class="eyebrow rv" style="display:inline-block;">CURRICULUM</p>
-      <h2 class="sec-head rv">全4回で学ぶこと</h2>
+      <h2 class="sec-head rv">無料準備講座＋本講座<span class="pk">全3回</span></h2>
     </div>
     <div class="curri-list">
       <div class="lesson rv">
-        <div class="lesson-num"><span class="en-no">LESSON</span><span class="big en">1</span></div>
+        <div class="lesson-num"><span class="en-no">PREP</span><span class="big en">0</span></div>
         <div class="lesson-body">
           <span class="lesson-tag tag-free">無料・動画視聴</span>
           <p class="lesson-title">給与明細とお金の流れ</p>
@@ -430,7 +450,7 @@ footer { background:var(--ink); color:#fff; text-align:center; padding:40px 22px
         </div>
       </div>
       <div class="lesson rv">
-        <div class="lesson-num"><span class="en-no">LESSON</span><span class="big en">2</span></div>
+        <div class="lesson-num"><span class="en-no">LESSON</span><span class="big en">1</span></div>
         <div class="lesson-body">
           <span class="lesson-tag tag-zoom">Zoom 1on1</span>
           <p class="lesson-title">保険と投資 — 守る力と育てる力</p>
@@ -438,7 +458,7 @@ footer { background:var(--ink); color:#fff; text-align:center; padding:40px 22px
         </div>
       </div>
       <div class="lesson rv">
-        <div class="lesson-num"><span class="en-no">LESSON</span><span class="big en">3</span></div>
+        <div class="lesson-num"><span class="en-no">LESSON</span><span class="big en">2</span></div>
         <div class="lesson-body">
           <span class="lesson-tag tag-zoom">Zoom 1on1</span>
           <p class="lesson-title">ESBIとビジネスモデル</p>
@@ -446,9 +466,9 @@ footer { background:var(--ink); color:#fff; text-align:center; padding:40px 22px
         </div>
       </div>
       <div class="lesson rv">
-        <div class="lesson-num"><span class="en-no">LESSON</span><span class="big en">4</span></div>
+        <div class="lesson-num"><span class="en-no">LESSON</span><span class="big en">3</span></div>
         <div class="lesson-body">
-          <span class="lesson-tag tag-video">動画視聴</span>
+          <span class="lesson-tag tag-zoom">Zoom 1on1</span>
           <p class="lesson-title">お金と人生の設計図</p>
           <p class="lesson-desc">お金＝手段という視点、時間のマトリクス、未来を変える「第2領域」。"何のために稼ぐか"を言語化。</p>
         </div>
@@ -463,7 +483,7 @@ footer { background:var(--ink); color:#fff; text-align:center; padding:40px 22px
     <p class="eyebrow rv">TEXTBOOK</p>
     <h2 class="sec-head rv">各回に<span class="pk">オリジナル教科書</span>つき</h2>
     <p class="tb-lead rv">
-      毎回、その回に合わせた<strong>書き込み式の教科書</strong>を用意しています。<br>
+      それぞれの回に合わせた<strong>書き込み式の教科書</strong>を用意しています。<br>
       聞いて終わりではなく、自分の数字で手を動かしながら学べます。
     </p>
     <div class="tb-grid">
@@ -480,14 +500,14 @@ footer { background:var(--ink); color:#fff; text-align:center; padding:40px 22px
 <section class="survey">
   <div class="wrap">
     <div class="survey-card rv">
-      <span class="survey-flag">お申し込みではありません🙆‍♀️</span>
-      <h2 class="survey-title">まずは<span class="pk">アンケート</span>だけでも</h2>
+      <span class="survey-flag">送信後に無料動画をご案内🎁</span>
+      <h2 class="survey-title">「お金の勉強」<span class="pk">スタート前チェック</span></h2>
       <p class="survey-desc">
         「今どんなことにお金の不安があるか」を教えてください。<br>
-        <strong>答えるだけでOK。勧誘も申し込みもありません。</strong><br>
-        第1回を見た感想もこちらから届けられます。
+        <strong>回答はお申込みではありません。無理な勧誘もありません。</strong><br>
+        送信後に、無料準備講座「給与明細とお金の流れ」をご覧いただけます。
       </p>
-      <a class="survey-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeh1oEiwktsXuaKFyYlFlb7mgQZndGyd1MIMK3-9YzJkoK-7w/viewform?usp=header" target="_blank" rel="noopener">事前アンケートに答える（無料）</a>
+      <a class="survey-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeh1oEiwktsXuaKFyYlFlb7mgQZndGyd1MIMK3-9YzJkoK-7w/viewform" target="_blank" rel="noopener">スタート前チェックに答える（無料）</a>
       <p class="survey-mini">所要 約2分・Googleフォームが開きます</p>
     </div>
   </div>
@@ -499,14 +519,22 @@ footer { background:var(--ink); color:#fff; text-align:center; padding:40px 22px
     <p class="eyebrow rv">JOIN</p>
     <h2 class="sec-head rv">受講のご案内</h2>
     <div class="price-box rv">
-      <p class="price-plan">お金の勉強シリーズ 全4回</p>
-      <p class="price-amt"><span class="yen">¥</span>24,600<span class="tax">(税込)</span></p>
-      <p class="price-per"><span class="line">第1回：無料動画</span><span class="line">第2・3回：Zoom 1on1</span><span class="line">第4回：動画</span></p>
-      <a class="join-square" href="https://square.link/u/YFEvWosK" target="_blank" rel="noopener">お申し込みはこちら</a>
+      <span class="price-badge">おすすめ・セットがお得</span>
+      <p class="price-plan">本講座 全3回セット</p>
+      <p class="price-amt"><span class="yen">¥</span>19,800<span class="tax">(税込)</span></p>
+      <p class="price-per"><span class="line">1回あたり6,600円</span><span class="line">単発3回より3,300円お得</span></p>
+      <a class="join-square" href="https://docs.google.com/forms/d/e/1FAIpQLSeByt-UmvlOpCfhMtYjT4S2D6p1AThEXEuUGnFwWXasJ1a2cQ/viewform?usp=dialog" target="_blank" rel="noopener">全3回セットに申し込む</a>
     </div>
+    <div class="price-box single rv">
+      <p class="price-plan">気になるテーマから始める</p>
+      <p class="price-amt"><span class="yen">¥</span>7,700<span class="tax">／1回</span></p>
+      <p class="price-per"><span class="line">第1回・第2回・第3回から選択</span><span class="line">単発受講も教科書つき</span></p>
+      <a class="join-square" href="https://docs.google.com/forms/d/e/1FAIpQLSeByt-UmvlOpCfhMtYjT4S2D6p1AThEXEuUGnFwWXasJ1a2cQ/viewform?usp=dialog" target="_blank" rel="noopener">単発受講に申し込む</a>
+    </div>
+    <p class="upgrade-note rv"><strong>単発からセットへの変更もできます</strong>単発受講日から7日以内に全3回セットへ変更される場合は、お支払い済みの7,700円を差し引きます。追加のお支払いは12,100円です。</p>
     <p class="join-flow rv">
-      <span class="step">① 第1回を無料で見る</span> ▶ <span class="step">② 気になったら相談・アンケート</span><br>
-      ▶ <span class="step">③ お申し込み</span> ▶ <span class="step">④ Zoom日程をご調整</span>
+      <span class="step">① スタート前チェック</span> ▶ <span class="step">② 無料準備講座を見る</span><br>
+      ▶ <span class="step">③ プランを選んでお申込み</span> ▶ <span class="step">④ 受講日程をご調整</span>
     </p>
   </div>
 </section>
