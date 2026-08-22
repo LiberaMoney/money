@@ -263,9 +263,13 @@ body {
 .tb-note .pk { color:var(--pink); font-weight:700; }
 /* ===== VOICE ===== */
 .voice { padding:64px 0; background:var(--white); text-align:center; }
+.voice-grid {
+  display:grid; grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px; margin-top:34px;
+}
 .voice-card {
-  position:relative; max-width:720px; margin:34px auto 0;
-  padding:38px 38px 32px; text-align:left;
+  position:relative; margin:0;
+  padding:34px 28px 28px; text-align:left;
   background:var(--cream); border:1px solid var(--line); border-radius:22px;
   box-shadow:0 12px 34px rgba(255,30,140,0.10);
 }
@@ -285,7 +289,7 @@ body {
 }
 .voice-text {
   position:relative; color:var(--ink); font-size:clamp(14px,3.6vw,16px);
-  line-height:2; font-weight:500;
+  line-height:1.9; font-weight:500;
 }
 .voice-text .secret {
   display:block; margin-top:14px; padding:14px 16px;
@@ -293,6 +297,7 @@ body {
   color:var(--ink); font-weight:700;
 }
 @media(max-width:560px){
+  .voice-grid { grid-template-columns:1fr; }
   .voice-card { padding:32px 22px 24px; }
   .voice-text { line-height:1.9; }
 }
@@ -531,21 +536,6 @@ footer { background:var(--ink); color:#fff; text-align:center; padding:40px 22px
   </div>
 </section>
 
-<!-- VOICE -->
-<section class="voice">
-  <div class="wrap">
-    <p class="eyebrow rv">VOICE</p>
-    <h2 class="sec-head rv">受講された方の<span class="pk">ご感想</span></h2>
-    <div class="voice-card rv">
-      <p class="voice-profile">30代女性</p>
-      <p class="voice-text">
-        重い尻を上げて説明を聞いたけど、すごく丁寧でどう言う流れでお金が動いて、投資まで進めるか理解出来て、自分の将来の事も考えて、今の時代お金も大事だから運用も準備できた。
-        <span class="secret">ここだけの話、将来自立も視野に入れていたから相手にバレないように着々と準備を進める事ができた（笑）</span>
-      </p>
-    </div>
-  </div>
-</section>
-
 <!-- SURVEY -->
 <section class="survey">
   <div class="wrap">
@@ -586,6 +576,32 @@ footer { background:var(--ink); color:#fff; text-align:center; padding:40px 22px
       <span class="step">① スタート前チェック</span> ▶ <span class="step">② 無料準備講座を見る</span><br>
       ▶ <span class="step">③ プランを選んでお申込み</span> ▶ <span class="step">④ 受講日程をご調整</span>
     </p>
+  </div>
+</section>
+
+<!-- VOICE -->
+<section class="voice">
+  <div class="wrap">
+    <p class="eyebrow rv">VOICE</p>
+    <h2 class="sec-head rv">受講された方の<span class="pk">ご感想</span></h2>
+    <div class="voice-grid">
+      <div class="voice-card rv">
+        <p class="voice-profile">50代女性</p>
+        <p class="voice-text">動画から、さっちゃんの真摯な思いが伝わってきました。今すぐ必要という状況ではありませんでしたが、仕事や人生に悩んでいる方の安心につながる内容だと感じました。動画だけでも十分学びになりました。</p>
+      </div>
+      <div class="voice-card rv">
+        <p class="voice-profile">40代女性</p>
+        <p class="voice-text">最近取り組んでいる運用が間違っていないと再確認できました。いろいろ知ったうえで「選択すること」の大切さも実感。構えずに参加できて、今の自分の状況に気づける楽しい講座です。超オススメ！</p>
+      </div>
+      <div class="voice-card rv">
+        <p class="voice-profile">30代女性</p>
+        <p class="voice-text">お金がどう動き、投資までどう進めるのかを丁寧に説明してもらい、よく理解できました。自分の将来も考えながら、運用の準備を進めることができました。<span class="secret">ここだけの話、将来自立も視野に入れていたので、相手にバレないよう着々と準備できました（笑）</span></p>
+      </div>
+      <div class="voice-card rv">
+        <p class="voice-profile">20代女性</p>
+        <p class="voice-text">インフレ・デフレの説明がとても分かりやすく、すごく腑に落ちました。入院保険やがん保険の話も実体験を交えて聞けて、見直すきっかけに。声のトーンや話すスピードもちょうどよく、次回も楽しみです！</p>
+      </div>
+    </div>
   </div>
 </section>
 
